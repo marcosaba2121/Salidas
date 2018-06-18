@@ -7,9 +7,31 @@
 //
 
 import UIKit
+import ILLoginKit
 
 class ViewController: UIViewController {
 
+    var hasShownLogin = false
+    
+    lazy var loginCoordinator: LoginCoordinator = {
+        return LoginCoordinator(rootViewController: self)
+    }()
+    
+    lazy var loginViewController: OverridenLoginViewController = {
+        let controller = OverridenLoginViewController()
+        controller.delegate = self as! LoginViewControllerDelegate
+        return controller
+    }()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard !hasShownLogin else {
+            return
+        }
+        
+        hasShownLogin = true
+        loginCoordinator.start()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

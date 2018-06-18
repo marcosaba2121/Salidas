@@ -14,6 +14,9 @@
 		8DC00E1C20D1A72000D82A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC00E1A20D1A72000D82A02 /* Main.storyboard */; };
 		8DC00E1E20D1A72000D82A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC00E1D20D1A72000D82A02 /* Assets.xcassets */; };
 		8DC00E2120D1A72000D82A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC00E1F20D1A72000D82A02 /* LaunchScreen.storyboard */; };
+		8DCF693A20D865400010CB83 /* OverridenLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF693720D8653E0010CB83 /* OverridenLoginViewController.swift */; };
+		8DCF693B20D865400010CB83 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF693820D8653F0010CB83 /* HomeTableViewController.swift */; };
+		8DCF693C20D865400010CB83 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF693920D8653F0010CB83 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8DC00E1D20D1A72000D82A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DC00E2020D1A72000D82A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC00E2220D1A72000D82A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DCF693720D8653E0010CB83 /* OverridenLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverridenLoginViewController.swift; sourceTree = "<group>"; };
+		8DCF693820D8653F0010CB83 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		8DCF693920D8653F0010CB83 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A6E65A3012676BFE3E612A67 /* Pods_Salidas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Salidas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F27AB433575637C90D0B1A /* Pods-Salidas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salidas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Salidas/Pods-Salidas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +80,9 @@
 			children = (
 				8D2785C620D1A7AF005B478E /* GoogleService-Info.plist */,
 				8DC00E1620D1A72000D82A02 /* AppDelegate.swift */,
+				8DCF693820D8653F0010CB83 /* HomeTableViewController.swift */,
+				8DCF693920D8653F0010CB83 /* LoginCoordinator.swift */,
+				8DCF693720D8653E0010CB83 /* OverridenLoginViewController.swift */,
 				8DC00E1820D1A72000D82A02 /* ViewController.swift */,
 				8DC00E1A20D1A72000D82A02 /* Main.storyboard */,
 				8DC00E1D20D1A72000D82A02 /* Assets.xcassets */,
@@ -187,15 +196,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Salidas/Pods-Salidas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ILLoginKit/ILLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -211,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCF693B20D865400010CB83 /* HomeTableViewController.swift in Sources */,
 				8DC00E1920D1A72000D82A02 /* ViewController.swift in Sources */,
+				8DCF693C20D865400010CB83 /* LoginCoordinator.swift in Sources */,
 				8DC00E1720D1A72000D82A02 /* AppDelegate.swift in Sources */,
+				8DCF693A20D865400010CB83 /* OverridenLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
